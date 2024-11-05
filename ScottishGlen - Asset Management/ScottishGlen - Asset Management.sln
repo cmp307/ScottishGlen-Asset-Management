@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScottishGlen - Asset Management", "ScottishGlen - Asset Management\ScottishGlen - Asset Management.csproj", "{934C3BD7-AE70-4130-9AED-BBA923DD49F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScottishGlen - Asset Management", "ScottishGlen - Asset Management\ScottishGlen - Asset Management.csproj", "{1B63B89A-ADB8-4F2E-B6B6-C513A3CFC28E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{934C3BD7-AE70-4130-9AED-BBA923DD49F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{934C3BD7-AE70-4130-9AED-BBA923DD49F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{934C3BD7-AE70-4130-9AED-BBA923DD49F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{934C3BD7-AE70-4130-9AED-BBA923DD49F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B63B89A-ADB8-4F2E-B6B6-C513A3CFC28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B63B89A-ADB8-4F2E-B6B6-C513A3CFC28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B63B89A-ADB8-4F2E-B6B6-C513A3CFC28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B63B89A-ADB8-4F2E-B6B6-C513A3CFC28E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C36E458E-1B87-44D8-BDB7-A651468430BC}
+		SolutionGuid = {433D9460-96BB-49D4-BE27-2D265A7E2F6D}
 	EndGlobalSection
 EndGlobal
