@@ -25,16 +25,30 @@ namespace ScottishGlen___Asset_Management
             // Get Computer Name
             string computerName = Environment.MachineName;
 
-            // Get Manufacturer
+            // Get Manufacturer and Model
             string manufacturer = "";
-
-            //Get Model
             string model = "";
 
-            ManagementObjectSearcher() ;
+            using (ManagementObjectSearcher searcher = new ManagementObjectSearcher ("SELECT * FROM Win32_ComputerSystem"))
+        {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    manufacturer = obj["Manufacturer"]?.ToString() ?? "Unknown";
+                    model = obj["Model"]?.ToString() ?? "Unknown";
+                }
+            }
 
-            //// Get System Type
+            // Get System Type
             string systemType = "";
+            using (ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystem"))
+            {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    systemType = obj["SystemType"]?.ToString() ?? "Unknown";
+                }
+            }
+
+            
       
             // Get IP Address
             string ipAddress = "Not available";

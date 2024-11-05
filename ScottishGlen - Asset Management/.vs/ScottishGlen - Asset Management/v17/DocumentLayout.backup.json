@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{1B63B89A-ADB8-4F2E-B6B6-C513A3CFC28E}|ScottishGlen - Asset Management\\ScottishGlen - Asset Management.csproj|solutionrelative:scottishglen - asset management\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B63B89A-ADB8-4F2E-B6B6-C513A3CFC28E}|ScottishGlen - Asset Management\\ScottishGlen - Asset Management.csproj|c:\\users\\2200492\\onedrive - abertay university\\cmp307 asset management\\scottishglen-asset-management\\scottishglen - asset management\\scottishglen - asset management\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1B63B89A-ADB8-4F2E-B6B6-C513A3CFC28E}|ScottishGlen - Asset Management\\ScottishGlen - Asset Management.csproj|C:\\Users\\2200492\\OneDrive - Abertay University\\CMP307 Asset Management\\ScottishGlen-Asset-Management\\ScottishGlen - Asset Management\\scottishglen - asset management\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1B63B89A-ADB8-4F2E-B6B6-C513A3CFC28E}|ScottishGlen - Asset Management\\ScottishGlen - Asset Management.csproj|solutionrelative:scottishglen - asset management\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -26,9 +26,9 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\2200492\\OneDrive - Abertay University\\CMP307 Asset Management\\ScottishGlen-Asset-Management\\ScottishGlen - Asset Management\\ScottishGlen - Asset Management\\Form1.cs",
               "RelativeDocumentMoniker": "ScottishGlen - Asset Management\\Form1.cs",
-              "ToolTip": "C:\\Users\\2200492\\OneDrive - Abertay University\\CMP307 Asset Management\\ScottishGlen-Asset-Management\\ScottishGlen - Asset Management\\ScottishGlen - Asset Management\\Form1.cs",
-              "RelativeToolTip": "ScottishGlen - Asset Management\\Form1.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAASwCgAAAAMAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\2200492\\OneDrive - Abertay University\\CMP307 Asset Management\\ScottishGlen-Asset-Management\\ScottishGlen - Asset Management\\ScottishGlen - Asset Management\\Form1.cs*",
+              "RelativeToolTip": "ScottishGlen - Asset Management\\Form1.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T12:18:49.343Z",
               "EditorCaption": ""
@@ -39,8 +39,8 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\2200492\\OneDrive - Abertay University\\CMP307 Asset Management\\ScottishGlen-Asset-Management\\ScottishGlen - Asset Management\\ScottishGlen - Asset Management\\Form1.cs",
               "RelativeDocumentMoniker": "ScottishGlen - Asset Management\\Form1.cs",
-              "ToolTip": "C:\\Users\\2200492\\OneDrive - Abertay University\\CMP307 Asset Management\\ScottishGlen-Asset-Management\\ScottishGlen - Asset Management\\ScottishGlen - Asset Management\\Form1.cs [Design]",
-              "RelativeToolTip": "ScottishGlen - Asset Management\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\2200492\\OneDrive - Abertay University\\CMP307 Asset Management\\ScottishGlen-Asset-Management\\ScottishGlen - Asset Management\\ScottishGlen - Asset Management\\Form1.cs [Design]*",
+              "RelativeToolTip": "ScottishGlen - Asset Management\\Form1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T12:11:55.53Z",
               "EditorCaption": " [Design]"
