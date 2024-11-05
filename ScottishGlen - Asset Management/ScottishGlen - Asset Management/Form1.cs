@@ -30,7 +30,8 @@ namespace ScottishGlen___Asset_Management
 
             //Get Model
             string model = "";
-       
+
+            ManagementObjectSearcher() ;
 
             //// Get System Type
             string systemType = "";
@@ -92,6 +93,16 @@ namespace ScottishGlen___Asset_Management
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
         }

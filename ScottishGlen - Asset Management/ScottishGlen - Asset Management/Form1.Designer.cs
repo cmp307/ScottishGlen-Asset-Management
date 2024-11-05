@@ -41,20 +41,23 @@
             this.myIPAddress = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.Notes = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.submitButton = new System.Windows.Forms.Button();
+            this.PurchaseDate = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.EmployeeID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ComputerName
             // 
             this.ComputerName.Location = new System.Drawing.Point(238, 157);
             this.ComputerName.Name = "ComputerName";
+            this.ComputerName.ReadOnly = true;
             this.ComputerName.Size = new System.Drawing.Size(162, 20);
             this.ComputerName.TabIndex = 2;
             // 
@@ -137,6 +140,7 @@
             // 
             this.myIPAddress.Location = new System.Drawing.Point(238, 261);
             this.myIPAddress.Name = "myIPAddress";
+            this.myIPAddress.ReadOnly = true;
             this.myIPAddress.Size = new System.Drawing.Size(162, 20);
             this.myIPAddress.TabIndex = 10;
             // 
@@ -160,13 +164,13 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Notes:";
             // 
-            // textBox8
+            // Notes
             // 
-            this.textBox8.Location = new System.Drawing.Point(238, 352);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(162, 98);
-            this.textBox8.TabIndex = 14;
+            this.Notes.Location = new System.Drawing.Point(238, 352);
+            this.Notes.Multiline = true;
+            this.Notes.Name = "Notes";
+            this.Notes.Size = new System.Drawing.Size(162, 98);
+            this.Notes.TabIndex = 14;
             // 
             // label8
             // 
@@ -183,28 +187,28 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // button1
+            // submitButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(315, 473);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitButton.Location = new System.Drawing.Point(315, 473);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(85, 23);
+            this.submitButton.TabIndex = 18;
+            this.submitButton.Text = "Submit";
+            this.submitButton.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // PurchaseDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(238, 327);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(162, 20);
-            this.dateTimePicker1.TabIndex = 19;
+            this.PurchaseDate.Location = new System.Drawing.Point(238, 327);
+            this.PurchaseDate.Name = "PurchaseDate";
+            this.PurchaseDate.Size = new System.Drawing.Size(162, 20);
+            this.PurchaseDate.TabIndex = 19;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(134, 108);
+            this.label9.Location = new System.Drawing.Point(134, 85);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(265, 33);
             this.label9.TabIndex = 20;
@@ -230,20 +234,41 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "Scottish Glen - Asset Management";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(137, 132);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(88, 16);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Employee ID:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // EmployeeID
+            // 
+            this.EmployeeID.Location = new System.Drawing.Point(238, 131);
+            this.EmployeeID.Name = "EmployeeID";
+            this.EmployeeID.Size = new System.Drawing.Size(162, 20);
+            this.EmployeeID.TabIndex = 23;
+            this.EmployeeID.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(553, 596);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.EmployeeID);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.PurchaseDate);
+            this.Controls.Add(this.submitButton);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.Notes);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.myIPAddress);
@@ -276,14 +301,16 @@
         private System.Windows.Forms.TextBox myIPAddress;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox Notes;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button submitButton;
+        private System.Windows.Forms.DateTimePicker PurchaseDate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox EmployeeID;
     }
 }
 
