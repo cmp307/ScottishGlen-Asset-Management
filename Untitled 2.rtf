@@ -5,65 +5,49 @@
 \paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 public partial class Form1 : Form\
+\f0\fs24 \cf0 private void submitButton_Click(object sender, EventArgs e)\
 \{\
-    public Form1()\
+    // Collect data from form controls\
+    string name = nameTextBox.Text;\
+    string email = emailTextBox.Text;\
+\
+    // Connection string (get it from App.config or define directly here)\
+    string connectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;\
+\
+    // SQL query for data insertion\
+    string query = "INSERT INTO Users (Name, Email) VALUES (@Name, @Email)";\
+\
+    try\
     \{\
-        InitializeComponent();\
-        LoadSystemInfo();  // Call this method on form load\
-    \}\
-\
-    private void LoadSystemInfo()\
-    \{\
-        // Get Computer Name\
-        string computerName = Environment.MachineName;\
-\
-        // Get Manufacturer and Model\
-        string manufacturer = "";\
-        string model = "";\
-        using (ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystem"))\
+        using (SqlConnection connection = new SqlConnection(connectionString))\
         \{\
-            foreach (ManagementObject obj in searcher.Get())\
-            \{\
-                manufacturer = obj["Manufacturer"]?.ToString() ?? "Unknown";\
-                model = obj["Model"]?.ToString() ?? "Unknown";\
-            \}\
-        \}\
+            // Open the connection\
+            connection.Open();\
 \
-        // Get System Type (e.g., x64-based PC)\
-        string systemType = "";\
-        using (ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystem"))\
-        \{\
-            foreach (ManagementObject obj in searcher.Get())\
+            // Create an SQL command\
+            using (SqlCommand command = new SqlCommand(query, connection))\
             \{\
-                systemType = obj["SystemType"]?.ToString() ?? "Unknown";\
-            \}\
-        \}\
+                // Define parameters to prevent SQL injection\
+                command.Parameters.AddWithValue("@Name", name);\
+                command.Parameters.AddWithValue("@Email", email);\
 \
-        // Get IP Address\
-        string ipAddress = "Not available";\
-        try\
-        \{\
-            foreach (var address in Dns.GetHostAddresses(Dns.GetHostName()))\
-            \{\
-                if (address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)  // IPv4 address\
+                // Execute the command\
+                int rowsAffected = command.ExecuteNonQuery();\
+\
+                if (rowsAffected > 0)\
                 \{\
-                    ipAddress = address.ToString();\
-                    break;\
+                    MessageBox.Show("Data submitted successfully!");\
+                \}\
+                else\
+                \{\
+                    MessageBox.Show("Data submission failed.");\
                 \}\
             \}\
         \}\
-        catch\
-        \{\
-            ipAddress = "Unable to retrieve IP";\
-        \}\
-\
-        // Display information in labels (ensure these labels are added to your Form in the Designer)\
-        labelComputerName.Text = $"Computer Name: \{computerName\}";\
-        labelManufacturer.Text = $"Manufacturer: \{manufacturer\}";\
-        labelModel.Text = $"Model: \{model\}";\
-        labelSystemType.Text = $"System Type: \{systemType\}";\
-        labelIPAddress.Text = $"IP Address: \{ipAddress\}";\
+    \}\
+    catch (Exception ex)\
+    \{\
+        MessageBox.Show($"Error: \{ex.Message\}");\
     \}\
 \}\
 }

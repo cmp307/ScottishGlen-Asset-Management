@@ -194,6 +194,7 @@
             this.submitButton.TabIndex = 18;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click_1);
             // 
             // PurchaseDate
             // 
