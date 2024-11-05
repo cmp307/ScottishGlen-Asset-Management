@@ -22,51 +22,28 @@ namespace ScottishGlen___Asset_Management
 
         private void getSystemInfo()
         {
-            // Get Computer Name
+            // Get System Data
             string computerName = Environment.MachineName;
+            string manufacturer = "Unknown";
+            string model = "Unknown";
+            string systemType = "Unknown";
 
-            // Get Manufacturer and Model
-            string manufacturer = "";
-            string model = "";
-
-            using (ManagementObjectSearcher searcher = new ManagementObjectSearcher ("SELECT * FROM Win32_ComputerSystem"))
-        {
-                foreach (ManagementObject obj in searcher.Get())
-                {
-                    manufacturer = obj["Manufacturer"]?.ToString() ?? "Unknown";
-                    model = obj["Model"]?.ToString() ?? "Unknown";
-                }
-            }
-
-            // Get System Type
-            string systemType = "";
             using (ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystem"))
             {
                 foreach (ManagementObject obj in searcher.Get())
                 {
-                    systemType = obj["SystemType"]?.ToString() ?? "Unknown";
+                    manufacturer = obj["Manufacturer"]?.ToString();
+                    model = obj["Model"]?.ToString();
+                    systemType = obj["SystemType"]?.ToString();
                 }
             }
 
-            
-      
             // Get IP Address
             string ipAddress = "Not available";
-            try
-            {
-                foreach (var address in Dns.GetHostAddresses(Dns.GetHostName()))
-                {
-                    if (address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)  // IPv4 address
-                    {
-                        ipAddress = address.ToString();
-                        break;
-                    }
-                }
-            }
-            catch
-            {
-                ipAddress = "Unable to retrieve IP";
-            }
+            string hostName = Dns.GetHostName();
+            string IP = Dns.GetHostEntry(hostName).AddressList[0].ToString();
+            ipAddress = IP;
+
 
             ComputerName.Text = computerName;
             Manufacturer.Text = manufacturer;

@@ -57,7 +57,6 @@
             // 
             this.ComputerName.Location = new System.Drawing.Point(238, 157);
             this.ComputerName.Name = "ComputerName";
-            this.ComputerName.ReadOnly = true;
             this.ComputerName.Size = new System.Drawing.Size(162, 20);
             this.ComputerName.TabIndex = 2;
             // 
@@ -140,7 +139,6 @@
             // 
             this.myIPAddress.Location = new System.Drawing.Point(238, 261);
             this.myIPAddress.Name = "myIPAddress";
-            this.myIPAddress.ReadOnly = true;
             this.myIPAddress.Size = new System.Drawing.Size(162, 20);
             this.myIPAddress.TabIndex = 10;
             // 
