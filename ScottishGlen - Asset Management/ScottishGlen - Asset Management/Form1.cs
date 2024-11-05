@@ -56,60 +56,7 @@ namespace ScottishGlen___Asset_Management
 
         private void submitButton_Click(object sender, EventArgs e)
         {
-            string SystemName = ComputerName.Text;
-            string ManufacturerName = Manufacturer.Text;
-            string ModelName = Model.Text;
-            string SystemTypeName = SystemType.Text;
-            string IPAddressName = myIPAddress.Text;
-            string EmployeeIDName = EmployeeID.Text;
-
-            SqlConnection conn; // set a connection variable
-            string connString = "Data Source = tolmount.abertay.ac.uk; Initial Catalog = mssql2200492; User ID = mssql2200492; Password = W6Q5TenaMh"; // information about the server and database to connect to
-            conn = new SqlConnection(connString);// initialize the connection variable with this information
-
-
-            conn.Open(); // open the connection
-            System.Diagnostics.Debug.WriteLine("Connection successfully established.\n");
-
-            string query = "INSERT INTO dbo.Asset (SystemName, Manufacturer, Model, SystemType, IPAddress, EmployeeID) VALUES (@SystemName, @Manufacturer, @Model, @SystemType, @IPAddress, @EmployeeID)";
-
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connString))
-                {
-                    // Open the connection
-                    connection.Open();
-
-                    // Create an SQL command
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        // Define parameters to prevent SQL injection
-                        command.Parameters.AddWithValue("@SystemName", SystemName);
-                        command.Parameters.AddWithValue("@ManufacturerName", ManufacturerName);
-                        command.Parameters.AddWithValue("@ModelName", ModelName);
-                        command.Parameters.AddWithValue("@SystemTypeName", SystemTypeName);
-                        command.Parameters.AddWithValue("@IPAddressName", IPAddressName);
-                        command.Parameters.AddWithValue("@EmployeeIDName", EmployeeIDName);
-
-
-                        // Execute the command
-                        int rowsAffected = command.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Data submitted successfully!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Data submission failed.");
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
+            
         }
 
 
@@ -169,6 +116,8 @@ namespace ScottishGlen___Asset_Management
             string SystemTypeName = SystemType.Text;
             string IPAddressName = myIPAddress.Text;
             int EmployeeIDName = Convert.ToInt32(EmployeeID.Text);
+            string PurchaseDateName = PurchaseDate.Text;
+            string NotesName = Notes.Text;
 
             SqlConnection conn; // set a connection variable
             string connString = "Data Source = tolmount.abertay.ac.uk; Initial Catalog = mssql2200492; User ID = mssql2200492; Password = W6Q5TenaMh"; // information about the server and database to connect to
@@ -178,7 +127,7 @@ namespace ScottishGlen___Asset_Management
             conn.Open(); // open the connection
             System.Diagnostics.Debug.WriteLine("Connection successfully established.\n");
 
-            string query = "INSERT INTO dbo.Asset (SystemName, Manufacturer, Model, Type, IPAddress, EmployeeID) VALUES (@SystemName, @ManufacturerName, @ModelName, @SystemTypeName, @IPAddressName, @EmployeeIDName)";
+            string query = "INSERT INTO dbo.Asset (SystemName, Manufacturer, Model, Type, IPAddress, EmployeeID, Notes, PurchaseDate) VALUES (@SystemName, @ManufacturerName, @ModelName, @SystemTypeName, @IPAddressName, @EmployeeIDName, @NotesName, @PurchaseDateName)";
 
             try
             {
@@ -197,6 +146,8 @@ namespace ScottishGlen___Asset_Management
                         command.Parameters.AddWithValue("@SystemTypeName", SystemTypeName);
                         command.Parameters.AddWithValue("@IPAddressName", IPAddressName);
                         command.Parameters.AddWithValue("@EmployeeIDName", EmployeeIDName);
+                        command.Parameters.AddWithValue("@NotesName", NotesName);
+                        command.Parameters.AddWithValue("@PurchaseDateName", PurchaseDateName);
 
 
                         // Execute the command

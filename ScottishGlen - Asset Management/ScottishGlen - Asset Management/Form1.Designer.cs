@@ -45,12 +45,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.submitButton = new System.Windows.Forms.Button();
-            this.PurchaseDate = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.EmployeeID = new System.Windows.Forms.TextBox();
+            this.PurchaseDate = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ComputerName
@@ -196,13 +196,6 @@
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click_1);
             // 
-            // PurchaseDate
-            // 
-            this.PurchaseDate.Location = new System.Drawing.Point(238, 327);
-            this.PurchaseDate.Name = "PurchaseDate";
-            this.PurchaseDate.Size = new System.Drawing.Size(162, 20);
-            this.PurchaseDate.TabIndex = 19;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -252,18 +245,25 @@
             this.EmployeeID.TabIndex = 23;
             this.EmployeeID.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
+            // PurchaseDate
+            // 
+            this.PurchaseDate.Location = new System.Drawing.Point(238, 326);
+            this.PurchaseDate.Name = "PurchaseDate";
+            this.PurchaseDate.Size = new System.Drawing.Size(162, 20);
+            this.PurchaseDate.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(553, 596);
+            this.Controls.Add(this.PurchaseDate);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.EmployeeID);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.PurchaseDate);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -304,12 +304,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button submitButton;
-        private System.Windows.Forms.DateTimePicker PurchaseDate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox EmployeeID;
+        private System.Windows.Forms.TextBox PurchaseDate;
     }
 }
 
