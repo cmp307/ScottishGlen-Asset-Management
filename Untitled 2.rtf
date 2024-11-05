@@ -1,0 +1,69 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2818
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 public partial class Form1 : Form\
+\{\
+    public Form1()\
+    \{\
+        InitializeComponent();\
+        LoadSystemInfo();  // Call this method on form load\
+    \}\
+\
+    private void LoadSystemInfo()\
+    \{\
+        // Get Computer Name\
+        string computerName = Environment.MachineName;\
+\
+        // Get Manufacturer and Model\
+        string manufacturer = "";\
+        string model = "";\
+        using (ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystem"))\
+        \{\
+            foreach (ManagementObject obj in searcher.Get())\
+            \{\
+                manufacturer = obj["Manufacturer"]?.ToString() ?? "Unknown";\
+                model = obj["Model"]?.ToString() ?? "Unknown";\
+            \}\
+        \}\
+\
+        // Get System Type (e.g., x64-based PC)\
+        string systemType = "";\
+        using (ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystem"))\
+        \{\
+            foreach (ManagementObject obj in searcher.Get())\
+            \{\
+                systemType = obj["SystemType"]?.ToString() ?? "Unknown";\
+            \}\
+        \}\
+\
+        // Get IP Address\
+        string ipAddress = "Not available";\
+        try\
+        \{\
+            foreach (var address in Dns.GetHostAddresses(Dns.GetHostName()))\
+            \{\
+                if (address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)  // IPv4 address\
+                \{\
+                    ipAddress = address.ToString();\
+                    break;\
+                \}\
+            \}\
+        \}\
+        catch\
+        \{\
+            ipAddress = "Unable to retrieve IP";\
+        \}\
+\
+        // Display information in labels (ensure these labels are added to your Form in the Designer)\
+        labelComputerName.Text = $"Computer Name: \{computerName\}";\
+        labelManufacturer.Text = $"Manufacturer: \{manufacturer\}";\
+        labelModel.Text = $"Model: \{model\}";\
+        labelSystemType.Text = $"System Type: \{systemType\}";\
+        labelIPAddress.Text = $"IP Address: \{ipAddress\}";\
+    \}\
+\}\
+}

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.ComputerName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Manufacturer = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Model = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.SystemType = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.myIPAddress = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -51,12 +51,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox3
+            // ComputerName
             // 
-            this.textBox3.Location = new System.Drawing.Point(238, 157);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 20);
-            this.textBox3.TabIndex = 2;
+            this.ComputerName.Location = new System.Drawing.Point(238, 157);
+            this.ComputerName.Name = "ComputerName";
+            this.ComputerName.Size = new System.Drawing.Size(162, 20);
+            this.ComputerName.TabIndex = 2;
             // 
             // label1
             // 
@@ -80,12 +80,12 @@
             this.label2.Text = "Manufacturer:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
+            // Manufacturer
             // 
-            this.textBox2.Location = new System.Drawing.Point(238, 183);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 20);
-            this.textBox2.TabIndex = 4;
+            this.Manufacturer.Location = new System.Drawing.Point(238, 183);
+            this.Manufacturer.Name = "Manufacturer";
+            this.Manufacturer.Size = new System.Drawing.Size(162, 20);
+            this.Manufacturer.TabIndex = 4;
             // 
             // label3
             // 
@@ -98,12 +98,12 @@
             this.label3.Text = "Model:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox4
+            // Model
             // 
-            this.textBox4.Location = new System.Drawing.Point(238, 209);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 20);
-            this.textBox4.TabIndex = 6;
+            this.Model.Location = new System.Drawing.Point(238, 209);
+            this.Model.Name = "Model";
+            this.Model.Size = new System.Drawing.Size(162, 20);
+            this.Model.TabIndex = 6;
             // 
             // label4
             // 
@@ -116,12 +116,12 @@
             this.label4.Text = "Type:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox5
+            // SystemType
             // 
-            this.textBox5.Location = new System.Drawing.Point(238, 235);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(162, 20);
-            this.textBox5.TabIndex = 8;
+            this.SystemType.Location = new System.Drawing.Point(238, 235);
+            this.SystemType.Name = "SystemType";
+            this.SystemType.Size = new System.Drawing.Size(162, 20);
+            this.SystemType.TabIndex = 8;
             // 
             // label5
             // 
@@ -133,12 +133,12 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "IP Address:";
             // 
-            // textBox6
+            // myIPAddress
             // 
-            this.textBox6.Location = new System.Drawing.Point(238, 261);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(162, 20);
-            this.textBox6.TabIndex = 10;
+            this.myIPAddress.Location = new System.Drawing.Point(238, 261);
+            this.myIPAddress.Name = "myIPAddress";
+            this.myIPAddress.Size = new System.Drawing.Size(162, 20);
+            this.myIPAddress.TabIndex = 10;
             // 
             // label6
             // 
@@ -246,15 +246,15 @@
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.myIPAddress);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.SystemType);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.Model);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Manufacturer);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.ComputerName);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -264,16 +264,16 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ComputerName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Manufacturer;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Model;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox SystemType;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox myIPAddress;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox8;
